@@ -59,3 +59,21 @@ buck-out/
 # Ruby / CocoaPods
 /ios/Pods/
 /vendor/bundle/
+
+.buckconfig
+.eslintrc.js
+.flowconfig
+.gitignore
+.prettierrc.js
+.ruby-version
+.watchmanconfig
+app.json
+babel.config.js
+Gemfile
+Gemfile.lock
+hooks/
+words.json
+__tests__/
+.vscode/
+.bundle/
+
