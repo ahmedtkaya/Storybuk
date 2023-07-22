@@ -14,13 +14,21 @@ import {
   WelcomeModal,
   checkIfFirstTime,
 } from '../components/Modals/WelcomeModal';
+import {useMainState} from '../hooks/useState/useStates';
 
 const MainPage = ({navigation}) => {
-  const [data, setData] = useState([]);
-  const [error, setError] = useState(null);
-  const [isLoading, setIsLoading] = useState(true);
-  const [loading, setLoading] = useState(false);
-  const [modalVisible, setModalVisible] = useState(false); //test için true yap
+  const {
+    data,
+    setData,
+    error,
+    setError,
+    isLoading,
+    setIsLoading,
+    loading,
+    setLoading,
+    modalVisible,
+    setModalVisible,
+  } = useMainState();
 
   const GET_URL = 'http://192.168.1.85:3000';
 

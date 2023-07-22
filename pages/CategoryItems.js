@@ -7,13 +7,20 @@ import {
   FingerModal,
   checkFirstTime,
 } from '../components/Modals/FingerAnimation';
+import {useCategoryState} from '../hooks/useState/useStates';
 
 const CategoryItems = ({route, navigation}) => {
-  const [data, setData] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
+  const {
+    data,
+    setData,
+    loading,
+    setLoading,
+    error,
+    setError,
+    modalVisible,
+    setModalVisible,
+  } = useCategoryState();
   const {slug} = route.params;
-  const [modalVisible, setModalVisible] = useState(false); //test için true yap
 
   const GET_URL = 'http://192.168.1.85:3000';
 

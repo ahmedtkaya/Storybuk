@@ -15,16 +15,36 @@ import {
   DetailModal,
   checkDetailFirstTime,
 } from '../components/Modals/DetailModal';
+import {useDetailState} from '../hooks/useState/useStates';
 
 const Detail = ({route}) => {
-  const [data, setData] = useState([]);
+  /*const [data, setData] = useState([]);
   const [storyTR, setStoryTR] = useState();
   const [storyEN, setStoryEN] = useState();
   const [selectedLanguage, setSelectedLanguage] = useState('EN'); //seçilen standart dil EN
   const [modalVisible, setModalVisible] = useState(false); //test için true yap
   const [tramodalVisible, setTraModalVisible] = useState(false);
   const [selectedWord, setSelectedWord] = useState(null);
-  const [translatedWord, setTranslatedWord] = useState('');
+  const [translatedWord, setTranslatedWord] = useState('');*/
+  const {
+    data,
+    setData,
+    storyTR,
+    setStoryTR,
+    storyEN,
+    setStoryEN,
+    selectedLanguage,
+    setSelectedLanguage,
+    modalVisible,
+    setModalVisible,
+    tramodalVisible,
+    setTraModalVisible,
+    selectedWord,
+    setSelectedWord,
+    translatedWord,
+    setTranslatedWord,
+  } = useDetailState();
+
   const story = selectedLanguage === 'EN' ? storyEN : storyTR;
   const {slug} = route.params;
 
